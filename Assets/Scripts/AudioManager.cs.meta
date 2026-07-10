@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ce248dc787cc5f34ea3521a8c822bd64
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - musicSource: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - jumpSound: {fileID: 8300000, guid: 2a4db62555ca894469edfb0f226daf89, type: 3}
+  - switchSound: {instanceID: 0}
+  - mirrorSound: {instanceID: 0}
+  - checkpointSound: {instanceID: 0}
+  - enemySound: {instanceID: 0}
+  - victorySound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
