@@ -3,13 +3,22 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class LevelTimer : MonoBehaviour
-{
+{ 
     public float levelTime = 60f;
     public TextMeshProUGUI timerText;
 
     private float currentTime;
     private bool isPaused = false;
+         
+         public float GetCurrentTime()
+{
+    return currentTime;
+}
 
+public void SetCurrentTime(float time)
+{
+    currentTime = time;
+}
     void Start()
     {    Debug.Log("LevelTimer Start");
         Time.timeScale = 1f;   // زمان بازی را ریست کن

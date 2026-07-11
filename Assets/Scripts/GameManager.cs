@@ -1,7 +1,9 @@
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
-{
+{    
+    public PlayerHealth playerHealth;
+public LevelTimer levelTimer;
     public PlayerMovement aria;
     public PlayerMovement shadow;
     public AudioSource audioSource;
@@ -37,6 +39,33 @@ public AudioClip switchSound;
         {
             SwapCharacters();
         }
+
+        if (Input.GetKeyDown(KeyCode.K))
+{
+    SaveSystem.SaveGame(
+        playerHealth.GetCurrentLives(),
+        levelTimer.GetCurrentTime(),
+        aria.transform.position
+    );
+}
+
+if (Input.GetKeyDown(KeyCode.L))
+{
+    GameData data = SaveSystem.LoadGame();
+
+    if (data != null)
+    {
+        aria.transform.position = new Vector3(
+            data.playerX,
+            data.playerY,
+            aria.transform.position.z
+        );
+
+        levelTimer.SetCurrentTime(data.timer);
+
+        Debug.Log("Game Loaded");
+    }
+}
     }
 
     void SwitchControl()

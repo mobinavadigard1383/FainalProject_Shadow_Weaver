@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+ 
 
 public class PlayerHealth : MonoBehaviour
 {    
@@ -66,7 +66,11 @@ private void ResetDamage()
         rb.velocity = Vector2.zero;
         transform.position = respawnPoint.position;
     }
-
+     
+     public int GetCurrentLives()
+{
+    return currentLives;
+}
     void Die()
     {
         movement.canControl = false;
